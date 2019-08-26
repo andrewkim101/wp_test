@@ -29,8 +29,9 @@ class MainTest(unittest.TestCase):
 		self.driver.implicitly_wait(30)
 		self.driver.maximize_window() # Note: driver.maximize_window does not work on Linux selenium version v2, instead set window size and window position like driver.set_window_position(0,0) and driver.set_window_size(1920,1080)
 		self.driver.get("http://wp.houseofkim.info")
-		
-
+		elem = self.driver.find_element_by_xpath('//*[@id="masthead"]/div[1]/div[2]/div/div/h1/a')
+		self.assertTrue('WP' in elem.text)
+	
 	@classmethod
 	def tearDown(cls):
 		cls.driver.quit()
