@@ -4,12 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 					 
 # WebDriver driver = new RemoteWebDriver(new URL("http://192.168.11.108:4444/wd/hub"), capability)					 
-driver = webdriver.Remote(
-   command_executor="http://192.168.11.108:4444/wd/hub",
-   desired_capabilities={
-            "browserName": "chrome",
-            })
-#print ("Video: " + VIDEO_URL + driver.session_id)
+# driver = webdriver.Remote(
+#    command_executor="http://192.168.11.108:4444/wd/hub",
+#    desired_capabilities={
+#             "browserName": "firefox",
+#             })
+# #print ("Video: " + VIDEO_URL + driver.session_id)
+driver = webdriver.Chrome('./linux/chromedriver')
   
 try:
     driver.implicitly_wait(30)
