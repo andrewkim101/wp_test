@@ -2,7 +2,11 @@
 #file test_1.py
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-					 
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.headless = True
+
 # WebDriver driver = new RemoteWebDriver(new URL("http://192.168.11.108:4444/wd/hub"), capability)					 
 # driver = webdriver.Remote(
 #    command_executor="http://192.168.11.108:4444/wd/hub",
@@ -10,7 +14,7 @@ from selenium.webdriver.common.keys import Keys
 #             "browserName": "firefox",
 #             })
 # #print ("Video: " + VIDEO_URL + driver.session_id)
-driver = webdriver.Firefox()
+driver = webdriver.Chrome('/usr/local/bin/chromedriver',chrome_options=options)
    
 try:
     driver.implicitly_wait(30)
