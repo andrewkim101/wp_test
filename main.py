@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 #             "browserName": "firefox",
 #             })
 # #print ("Video: " + VIDEO_URL + driver.session_id)
-driver = webdriver.Firefox('./linux/geckodriver')
+driver = webdriver.Firefox()
    
 try:
     driver.implicitly_wait(30)
