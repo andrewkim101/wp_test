@@ -31,7 +31,7 @@ class MainTest(unittest.TestCase):
 		elem = self.driver.find_element_by_xpath('//*[@id="masthead"]/div[1]/div[2]/div/div/h1/a')
 		self.assertTrue('WP' in elem.text)
 	
-	def test_body(self):
+	def test_contact(self):
 		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
 		self.assertTrue('CONTACT' in elem.text)
 	
