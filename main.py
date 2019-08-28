@@ -31,10 +31,16 @@ class MainTest(unittest.TestCase):
 		elem = self.driver.find_element_by_xpath('//*[@id="masthead"]/div[1]/div[2]/div/div/h1/a')
 		self.assertTrue('WP' in elem.text)
 	
+	def test_about(self):
+		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
+		self.assertTrue('ABOUT' in elem.text)	
+	def test_blog(self):
+		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
+		self.assertTrue('blog' in elem.text)
+	
 	def test_contact(self):
 		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
 		self.assertTrue('CONTACT' in elem.text)
-	
 
 	@classmethod
 	def tearDown(cls):
