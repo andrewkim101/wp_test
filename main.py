@@ -42,6 +42,13 @@ class MainTest(unittest.TestCase):
 		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
 		self.assertTrue('CONTACT' in elem.text)
 
+	def test_search(self):
+		elem = self.driver.find_element_by_id('search-form-1')
+		elem.send_keys('smoking')
+		elem.submit()
+		product_name_list = self.driver.find_elements_by_xpath('//[div]')
+		self.assertEqual(7, len(product_name_list))
+
 	@classmethod
 	def tearDown(cls):
 		cls.driver.quit()
