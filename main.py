@@ -32,11 +32,11 @@ class MainTest(unittest.TestCase):
 		self.assertTrue('WP' in elem.text)
 	
 	def test_about(self):
-		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
+		elem = self.driver.find_element_by_xpath('//*[@id="panel2"]/div[2]/div/header/h2')
 		self.assertTrue('ABOUT' in elem.text)	
 	def test_blog(self):
-		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
-		self.assertTrue('blog' in elem.text)
+		elem = self.driver.find_element_by_xpath('//*[@id="panel3"]/div[2]/div/header/h2')
+		self.assertTrue('BLOG' in elem.text)
 	
 	def test_contact(self):
 		elem = self.driver.find_element_by_xpath('//*[@id="panel4"]/div[2]/div/header/h2')
